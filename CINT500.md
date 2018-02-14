@@ -17,7 +17,7 @@ Linke gittiğimizde bu görselle karşılaştık
 
 # Part 2: Yav iyi güzelde Metin nerde
 
-Ve direkt ampüller kafamızda belirdi. Cicada'daki gibi sayılar paragraf:cümle:harf numaralarına tekabül ediyordu. Alttaki soğan resmide .onion uzantısıydı.
+Ve direkt ampüller kafamızda belirdi. Cicada'daki gibi sayılar paragraf:kelime:harf numaralarına tekabül ediyordu. Alttaki soğan resmide .onion uzantısıydı.
 Fakat elimizde harfleri alacağımız bir metin yoktu.
 Hemen indirdiğimiz resime de bir exiftool attık.
 
