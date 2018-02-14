@@ -85,11 +85,11 @@ Kağıda çizip düşünmeye başladık...
 
 ![Alt text](https://i.hizliresim.com/9mdzz9.jpg)
 
-Sorunun başlığını tekrar okuyunca orta noktaları hesaplamaya başladık. Önce 56-40, 9,21 ikililerinin tam ortasını; 48,17'yi hesapladık. O kordinata gittik. Çevredeki yerlerin reviewlerine baktık baktık ancak birşey çıkmadı. Street view'e geçtik ilginç bişeyler
-varmı diye kolaçan ettik. Bir sonuca ulaşamadık. Acaba başka bir yoldan mı hesaplamamız gerekiyordu diye düşündük. Şekli Katı bir cisim gibi düşünüp ağırlık noktalarını hesaplamaya çalıştık.
+Sorunun başlığını tekrar okuyunca orta noktaları hesapladık. Önce 56-40, 9,21 ikililerinin tam ortasını; 48,17'yi bulduk. O kordinata gittik. Çevredeki yerlerin reviewlerine baktık baktık ancak birşey çıkmadı. Street view'e geçtik ilginç bişeyler
+varmı diye kolaçan ettik. Bir sonuca ulaşamadık. Acaba başka bir yoldan mı hesaplamamız gerekiyordu diye düşündük. Şekli Katı bir cisim gibi düşünüp ağırlık noktalarını çıkartmaya çalıştık.
 
 (51.2,17) , (52,17) tek tek denedik hiç ilginç bir şeyle karşılaşmadık. Akşama doğru bizim çizdiğimiz şekle çok benzer şekilde bir ipucu yayınlandı. Anladık ki ilk hesapladığımız noktada bir yerde.
-Reviewlerde olmadığına göre tek çare street viewdi. Meğerse tam o kordinatta etrafınıza baktığınızda bir bina görüyorsunuz.
+Reviewlerde olmadığına göre tek çare street viewdi. Tam o kordinatta  etrafınıza baktığınızda bir bina görüyorsunuz. Meğer o binanın üstündeki yazıymış.
 
 ![Alt text](https://i.hizliresim.com/G907l2.png)
 
