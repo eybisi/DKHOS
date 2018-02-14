@@ -63,7 +63,7 @@ Protokolün nasıl çalıştığını tam anlamasakta hemen kurduk.
 
 Şimdiye kadar indirdiğimiz en hızlı torrentti sanırım :)
 
-Zipin içinden 5 resim çıktı. Daha resimleri açmadan exiftool çaktık. Kordinat bilgilerini aldık ve tek tek yere yazdık.
+Zipin içinden 5 resim çıktı. Daha resimleri açmadan exiftool çaktık. Kordinat bilgilerini aldık ve tek tek  yazdık.
 
 # Part 4: Aha da kalp
 
