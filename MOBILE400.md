@@ -20,7 +20,8 @@ Soruda verilen apk;
   mobil400.APK
 
 Soruda bizden 557598******0364 şeklinde bir kredi kartı numarası girmemiz bekleniyor.
-![Alt text]("./MOBILE400/apk_giris.jpg")
+
+![Alt text](MOBILE400_Resimler/apk_giris.png)
 
 6 haneden 1 milyon seçenek var. Luhn algoritması sayesinde bu olasılıkları 100.000'e düşürebiliriz.Anca bunların hepsini elle girmemiz malesef mümkün değil.
 
@@ -30,7 +31,8 @@ windows_gif
 
 Bizim bu olasılıkları çok hızlı deneyebilmek için frida kullanmamız gerekiyor. Frida kısaca özetlersek telefonda çalışan bi uygulamaya dinamik olarak bağlanıp, aklınıza gelebilcek nerdeyse herşeyi yapabilyor.
 jdax ile gördüğümüz claslların instancelarına ulaşıp, o fonksiyon çağrıldıktan sonra değerleri manipule edebiliyorsunuz.
-![Alt text]("./MOBILE400/jdaxview.jpg.jpg")
+
+![Alt text](MOBILE400_Resimler/jdax_view.png)
 
 
 uygulamayı incelediğimizde anlıyoruzki check() fonksiyonu native bir libraryde ve kontrol ettiği değeri this.m üzerinden alıyor.
@@ -52,54 +54,57 @@ Fridayı bağlamak için önce emulatorun içine
 + ./frida-server-10.6.52-android-x86_64 &
 + Başka bi terminalde frida-ps -U yazıyoruz ve telefonda çalışan uygulamaları görebiliyoruz.
 + NFC_pay uygulamasını açıyoruz tekrar frida-ps -U yaptığımızda
-![Alt text]("./MOBILE400/frida-ps.jpg")
+
+![Alt text](MOBILE400_Resimler/frida-ps.png)
 
 
 + frida -U five.dkhos.mob.nfc_pay ile bağlanmaya çalışıyoruz
-![Alt text]("./MOBILE400/frida1.jpg")
+![Alt text](MOBILE400_Resimler/frida1.png)
 
 
 + Bu bi anti-debugger taktiği biraz araştırma sonrasında bunu bypass etmek için -f parametresini eklememiz gerektiğini öğreniyoruz. -f parametresi ile fridaya direk process'e inject olmak yerine Zygote a bağlanıp processi kendisi başlat diyoruz.
-![Alt text]("./MOBILE400/fparameter.jpg")
-fparameter.jpg
+
+![Alt text](MOBILE400_Resimler/fparameter.png)
+
 
 Ancak "Frida found yazısı ile karşılaşıyoruz"
 frida_found.jpg
-![Alt text]("./MOBILE400/frida_found.jpg")
+![Alt text](MOBILE400_Resimler/frida_found.jpg)
 
 İlk bypassımız kolay. jdax ile class yapısını anladıktan sonra APKEasyTool ile apkyı decompile ediyoruz.
-decompile.jpg
-![Alt text]("./MOBILE400/decompile.jpg")
- jdaxview.jpg
- ![Alt text]("./MOBILE400/jdax_view.jpg")
+
+![Alt text](MOBILE400_Resimler/decompile.png)
+
+![Alt text](MOBILE400_Resimler/jdax_view.png)
+ 
  + ``` .\smali\five\dkhos\mob\nfc_pay ```  içinde 2 adet smali dosyası görüyoruz. Bu aşamada jdaxdaki görüntü ve smali dosyası arasında mekik dokuyarak, hangi fonksiyon smalide nereye denk geliyor onu anlamamız gerekiyor.
- smalibypass.jpg
-![Alt text]("./MOBILE400/smalibypasss.jpg")
+ 
+![Alt text](MOBILE400_Resimler/smalibypass.jpg)
+
  Anlıyoruzki 48. satırdaki if bizim hedef noktamız. Bu if'e giren değer 1 ise "Frida found" şeklinde uyarı alıyoruz. Tabi bu adımlardan önce apkya frida bağlamayı denedik. Frida found yazısını orda da gördük.
  if'e const olarak 0 verirsek çok tatlı olucak. 39. satır gözümüze çarpıyor ve 48. satırda v0 yerine v4 yazıyoruz. Herşey tamam !
 
  APKEasyTool ile apkyı sırasıyla Recompile-Zipalign-Sign ediyoruz. Emülatorumuze yüklüyoruz ve işlem tamam. Artık sayı girip Doğrula dediğimizde "Frida found" yazısıyla karşılaşmıyoruz.
-halafrida.jpg
-![Alt text]("./MOBILE400/halafrida.jpg")
+
+![Alt text](MOBILE400_Resimler/halafrida.png)
  Haydaa. Demekki native libraryde de bi frida checki var.
 
- native-lib var ancak jdax-gui ile bu dosyaları göremiyoruz. O yüzden APKEasyTool ile decompile ediyoruz.
-  decompile.jpg
- ![Alt text]("./MOBILE400/decompile.jpg")
-  nativelib.jpg
- ![Alt text]("./MOBILE400/nativelib.jpg")
-  ../lib/x64_64/libnative-lib dosyasını görüyoruz.
+ native-lib var ancak jdax-gui ile bu dosyaları göremiyoruz. O yüzden APKEasyTool ile decompile ettiğimiz ndosyaların içinde ./lib/x64_64/libnative-lib.so dosyasını görüyoruz
+
+ 
+ ![Alt text](MOBILE400_Resimler/native-lib.png)
 
  libnative-lib.so dosyasını IDA Pro ile açıyoruz.
- secenek_ida.jpg
-![Alt text]("./MOBILE400/secenek_ida.jpg")
+ 
+![Alt text](MOBILE400_Resimler/secenek_ida.png)
+
  Frida checkini takip ettiğimizde loc_6380 fonksiyonua gidiyoruz. loc_6380 test yaptıktan sonra değere göre dallanıyor. Burda hızlıca işaretlediğimiz yere bi bypass atmamız lazım.
  Madem frida kullanıcaz o zaman sürekli sol tarafa düşeceğimizden  testteki 1'i 0'a çeviriyoruz.
-  secenekler.jpg
-![Alt text]("./MOBILE400/secenekler.jpg")
+  
+![Alt text](MOBILE400_Resimler/secenekler.png)
  Hemen açıyoruz ve ok
- bypass_ok.jpg   
-![Alt text]("./MOBILE400/bypass_ok.jpg")
+
+![Alt text](MOBILE400_Resimler/bypass_ok.png)
  Herşey tamam şimdi fridaya javascript scripti verip check ve k fonsiyonlarını kendimiz çağırıcaz.
 ```
 
