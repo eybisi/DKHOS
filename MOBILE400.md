@@ -26,8 +26,8 @@ Soruda bizden 557598******0364 şeklinde bir kredi kartı numarası girmemiz bek
 6 haneden 1 milyon seçenek var. Luhn algoritması sayesinde bu olasılıkları 100.000'e düşürebiliriz.Anca bunların hepsini elle girmemiz malesef mümkün değil.
 
 Denemek isteyenler için windows scripti;
-+ ```FOR /r %%X IN (luhnchecked.txt) DO (adb shell input text %%X & adb shell input keyevent 66 66 & adb shell input tap 700 800 & adb shell input 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67)```
-windows_gif
++ ```FOR /f %%x IN (luhnchecked.txt) DO ( adb shell input text %%x & adb shell input keyevent 66 66 & adb shell input tap 700 800 & adb shell input keyevent 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 )```
+![Alt text]("./MOBILE400/windowsgif.gif")
 
 Bizim bu olasılıkları çok hızlı deneyebilmek için frida kullanmamız gerekiyor. Frida kısaca özetlersek telefonda çalışan bi uygulamaya dinamik olarak bağlanıp, aklınıza gelebilcek nerdeyse herşeyi yapabilyor.
 jdax ile gördüğümüz claslların instancelarına ulaşıp, o fonksiyon çağrıldıktan sonra değerleri manipule edebiliyorsunuz.
