@@ -23,8 +23,15 @@ Soruda bizden 557598******0364 şeklinde bir kredi kartı numarası girmemiz bek
 
 6 haneden 1 milyon seçenek var. Luhn algoritması sayesinde bu olasılıkları 100.000'e düşürebiliriz.Anca bunların hepsini elle girmemiz malesef mümkün değil.
 
+
+
 Denemek isteyenler için windows scripti;
 + ```FOR /f %%x IN (luhnchecked.txt) DO ( adb shell input text %%x & adb shell input keyevent 66 66 & adb shell input tap 700 800 & adb shell input keyevent 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 67 )```
+
+Bu scripti bashscript.bat şeklinde kayıt edip bulunduğu klasorden çağırabilirsiniz
+
+luhnchecked.txt dosyasını oluşturmak için;
+python [luhncreater.py](luhncreater.py) > luhnchecked.txt
 
 ![Alt text](MOBILE400_Resimler/windowsgif.gif)
 
