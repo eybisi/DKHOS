@@ -78,7 +78,7 @@ Ancak "Frida found yazısı ile karşılaşıyoruz"
 
  + ``` .\smali\five\dkhos\mob\nfc_pay ```  içinde 2 adet smali dosyası görüyoruz. Bu aşamada jdaxdaki görüntü ve smali dosyası arasında mekik dokuyarak, hangi fonksiyon smalide nereye denk geliyor onu anlamamız gerekiyor.
 
-![Alt text](MOBILE400_Resimler/smalibypass.jpg)
+![Alt text](MOBILE400_Resimler/smalibypass.jpg.png)
 
  Anlıyoruzki 48. satırdaki if bizim hedef noktamız. Bu if'e giren değer 1 ise "Frida found" şeklinde uyarı alıyoruz. Tabi bu adımlardan önce apkya frida bağlamayı denedik. Frida found yazısını orda da gördük.
  if'e const olarak 0 verirsek çok tatlı olucak. 39. satır gözümüze çarpıyor ve 48. satırda v0 yerine v4 yazıyoruz. Herşey tamam !
