@@ -16,8 +16,6 @@ Yüklü olmasını beklediğimiz programlar;
 
 
 
-Soruda verilen apk;
-  mobil400.APK
 
 Soruda bizden 557598******0364 şeklinde bir kredi kartı numarası girmemiz bekleniyor.
 
@@ -37,10 +35,10 @@ jdax ile gördüğümüz claslların instancelarına ulaşıp, o fonksiyon çağ
 
 
 uygulamayı incelediğimizde anlıyoruzki check() fonksiyonu native bir libraryde ve kontrol ettiği değeri this.m üzerinden alıyor.
-k() fonksiyonuda bizim için biçilmiş kaftan. Ne verirsek m'e onu veriyor.
+a() fonksiyonuda bizim için biçilmiş kaftan. Ne verirsek m'e onu veriyor.
 Yolumuz belli;
  - Frida kontrollerini bypass edicez
- - Frida ile classa bağlanıp, önce k fonksiyonuyla m değerini değiştiricez ondan sonrada check fonksiyonunu çağırıp dönen değeri kontrol edeceğiz.
+ - Frida ile classa bağlanıp, önce a fonksiyonuyla m değerini değiştiricez ondan sonrada check fonksiyonunu çağırıp dönen değeri kontrol edeceğiz.
 
 + apk'yı emulatore yüklemek için ```adb install mobil400.apk```
 
