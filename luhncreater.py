@@ -1,4 +1,5 @@
 
+basenumber = 5575980000000364
 def luhn_checksum(card_number):
     def digits_of(n):
         return [int(d) for d in str(n)]
@@ -16,6 +17,6 @@ def is_luhn_valid(card_number):
 
 
 for i in range(1000000):
-	t = 5575980000000364+i*10000
+	t = basenumber+i*10000  
 	if(is_luhn_valid(t)):
 		print(t)
