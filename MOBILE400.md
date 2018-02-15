@@ -29,7 +29,7 @@ Denemek isteyenler için windows scripti;
 ![Alt text](MOBILE400_Resimler/windowsgif.gif)
 
 Bizim bu olasılıkları çok hızlı deneyebilmek için frida kullanmamız gerekiyor. Frida kısaca özetlersek telefonda çalışan bi uygulamaya dinamik olarak bağlanıp, aklınıza gelebilcek nerdeyse herşeyi yapabilyor.
-jdax ile gördüğümüz claslların instancelarına ulaşıp, o fonksiyon çağrıldıktan sonra değerleri manipule edebiliyorsunuz.
+jdax ile gördüğümüz bu classların instancelarına  frida ile ulaşıp, o fonksiyon çağrıldıktan sonra değerleri manipule edebiliyorsunuz.
 
 ![Alt text](MOBILE400_Resimler/jdax_view.png)
 
@@ -88,7 +88,7 @@ Ancak "Frida found yazısı ile karşılaşıyoruz"
 ![Alt text](MOBILE400_Resimler/halafrida.png)
  Haydaa. Demekki native libraryde de bi frida checki var.
 
- native-lib var ancak jdax-gui ile bu dosyaları göremiyoruz. O yüzden APKEasyTool ile decompile ettiğimiz dosyaların içinde ./lib/x64_64/libnative-lib.so dosyasını görüyoruz
+ native-lib var ancak jdax-gui ile bu dosyaları göremiyoruz. O yüzden APKEasyTool ile decompile ettiğimiz dosyaların içinde olan ./lib/x64_64/libnative-lib.so dosyasına gidiyoruz
 
 
  ![Alt text](MOBILE400_Resimler/native-lib.png)
@@ -97,14 +97,15 @@ Ancak "Frida found yazısı ile karşılaşıyoruz"
 
 ![Alt text](MOBILE400_Resimler/secenek_ida.png)
 
- Frida checkini takip ettiğimizde loc_6380 fonksiyonua gidiyoruz. loc_6380 test yaptıktan sonra değere göre dallanıyor. Burda hızlıca işaretlediğimiz yere bi bypass atmamız lazım.
+ Frida checkini takip ettiğimizde loc_6380 fonksiyonua gidiyoruz. loc_6380 test yaptıktan sonra değere göre dallanıyor. Burda  işaretlediğimiz yere bi bypass atmamız lazım.
  Madem frida kullanıcaz o zaman sürekli sol tarafa düşeceğimizden  testteki 1'i 0'a çeviriyoruz.
 
 ![Alt text](MOBILE400_Resimler/secenekler.png)
  Hemen açıyoruz ve ok
 
 ![Alt text](MOBILE400_Resimler/bypass_ok.png)
- Herşey tamam şimdi fridaya javascript scripti verip check ve k fonsiyonlarını kendimiz çağırıcaz.
+ Herşey tamam şimdi fridaya javascript scripti verip check ve a fonsiyonlarını kendimiz çağırıcaz.
+ Tüm kredi kartı numarası olasılıklarını dışarda hesaplayıp vermektense, scripte js ile yazılmış luhn algoritmasını ekliyoruz.
 ```
 
 function valid_credit_card(value) {
@@ -140,13 +141,13 @@ setImmediate(function() { //prevent timeout
 				      for( i = 0;i<1000000;i++)
 				      {
 				      number = basenumber+i*10000;
-				          if(valid_credit_card(String(number))){
-				                instance.a(String(number))
-				                if(i%100 === 0 ) console.log(number)
-				                retStr = instance.check()
+				          if(valid_credit_card(String(number))){ // validmi ?
+				                instance.a(String(number))	// Change local m string
+				                if(i%100 === 0 ) console.log(number)	// 100 seferde bir numarayı ekrana yaz
+				                retStr = instance.check() // check fonksiyonunu çağır ve return stringini sakla
 				                if(retStr !== "Yanlis numara!" ){
 					               console.log("Found number " + number)
-					               break
+					               break 
 				                }
 				          }
 				      }
