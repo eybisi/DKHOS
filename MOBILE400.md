@@ -76,9 +76,9 @@ frida_found.jpg
 ![Alt text](MOBILE400_Resimler/decompile.png)
 
 ![Alt text](MOBILE400_Resimler/jdax_view.png)
- 
+
  + ``` .\smali\five\dkhos\mob\nfc_pay ```  içinde 2 adet smali dosyası görüyoruz. Bu aşamada jdaxdaki görüntü ve smali dosyası arasında mekik dokuyarak, hangi fonksiyon smalide nereye denk geliyor onu anlamamız gerekiyor.
- 
+
 ![Alt text](MOBILE400_Resimler/smalibypass.jpg)
 
  Anlıyoruzki 48. satırdaki if bizim hedef noktamız. Bu if'e giren değer 1 ise "Frida found" şeklinde uyarı alıyoruz. Tabi bu adımlardan önce apkya frida bağlamayı denedik. Frida found yazısını orda da gördük.
@@ -91,16 +91,16 @@ frida_found.jpg
 
  native-lib var ancak jdax-gui ile bu dosyaları göremiyoruz. O yüzden APKEasyTool ile decompile ettiğimiz ndosyaların içinde ./lib/x64_64/libnative-lib.so dosyasını görüyoruz
 
- 
+
  ![Alt text](MOBILE400_Resimler/native-lib.png)
 
  libnative-lib.so dosyasını IDA Pro ile açıyoruz.
- 
+
 ![Alt text](MOBILE400_Resimler/secenek_ida.png)
 
  Frida checkini takip ettiğimizde loc_6380 fonksiyonua gidiyoruz. loc_6380 test yaptıktan sonra değere göre dallanıyor. Burda hızlıca işaretlediğimiz yere bi bypass atmamız lazım.
  Madem frida kullanıcaz o zaman sürekli sol tarafa düşeceğimizden  testteki 1'i 0'a çeviriyoruz.
-  
+
 ![Alt text](MOBILE400_Resimler/secenekler.png)
  Hemen açıyoruz ve ok
 
@@ -159,3 +159,4 @@ setImmediate(function() { //prevent timeout
 
 })
 ```
+![Alt Text](MOBILE400_Resimler/nfchack.gif)
