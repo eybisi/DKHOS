@@ -61,13 +61,13 @@ Fridayı bağlamak için önce emulatorun içine
 ![Alt text](MOBILE400_Resimler/frida1.png)
 
 
-+ Bu bi anti-debugger taktiği biraz araştırma sonrasında bunu bypass etmek için -f parametresini eklememiz gerektiğini öğreniyoruz. -f parametresi ile fridaya direk process'e inject olmak yerine Zygote a bağlanıp processi kendisi başlat diyoruz.
++ Bu bi anti-debugger taktiği biraz araştırma sonrasında bunu bypass etmek için -f parametresini eklememiz gerektiğini öğreniyoruz. -f parametresi ile fridaya direk process'e inject olmak yerine Zygote a bağlanıp processi başlat demiş oluyoruz.
 
 ![Alt text](MOBILE400_Resimler/fparameter.png)
 
 
 Ancak "Frida found yazısı ile karşılaşıyoruz"
-frida_found.jpg
+
 ![Alt text](MOBILE400_Resimler/frida_found.jpg)
 
 İlk bypassımız kolay. jdax ile class yapısını anladıktan sonra APKEasyTool ile apkyı decompile ediyoruz.
@@ -88,7 +88,7 @@ frida_found.jpg
 ![Alt text](MOBILE400_Resimler/halafrida.png)
  Haydaa. Demekki native libraryde de bi frida checki var.
 
- native-lib var ancak jdax-gui ile bu dosyaları göremiyoruz. O yüzden APKEasyTool ile decompile ettiğimiz ndosyaların içinde ./lib/x64_64/libnative-lib.so dosyasını görüyoruz
+ native-lib var ancak jdax-gui ile bu dosyaları göremiyoruz. O yüzden APKEasyTool ile decompile ettiğimiz dosyaların içinde ./lib/x64_64/libnative-lib.so dosyasını görüyoruz
 
 
  ![Alt text](MOBILE400_Resimler/native-lib.png)
