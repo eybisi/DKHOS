@@ -21,7 +21,7 @@ Soruda bizden 557598******0364 şeklinde bir kredi kartı numarası girmemiz bek
 
 ![Alt text](MOBILE400_Resimler/apk_giris.png)
 
-6 haneden 1 milyon seçenek var. Luhn algoritması sayesinde bu olasılıkları 100.000'e düşürebiliriz.Anca bunların hepsini elle girmemiz malesef mümkün değil.
+6 haneden 1 milyon seçenek var. Luhn algoritması sayesinde bu olasılıkları 100.000'e düşürebiliriz.Ancak bunların hepsini elle girmemiz malesef mümkün değil.
 
 
 
@@ -87,8 +87,7 @@ Ancak "Frida found yazısı ile karşılaşıyoruz"
 
 ![Alt text](MOBILE400_Resimler/smalibypass.jpg.png)
 
- Anlıyoruzki 48. satırdaki if bizim hedef noktamız. Bu if'e giren değer 1 ise "Frida found" şeklinde uyarı alıyoruz. Tabi bu adımlardan önce apkya frida bağlamayı denedik. Frida found yazısını orda da gördük.
- if'e const olarak 0 verirsek çok tatlı olucak. 39. satır gözümüze çarpıyor ve 48. satırda v0 yerine v4 yazıyoruz. Herşey tamam !
+ Anlıyoruzki 48. satırdaki if bizim hedef noktamız. Bu if'e giren değer 1 ise "Frida found" şeklinde uyarı alıyoruz. if'e const olarak 0 verirsek çok tatlı olucak. 39. satır gözümüze çarpıyor ve 48. satırda v0 yerine v4 yazıyoruz. Herşey tamam !
 
  APKEasyTool ile apkyı sırasıyla Recompile-Zipalign-Sign ediyoruz. Emülatorumuze yüklüyoruz ve işlem tamam. Artık sayı girip Doğrula dediğimizde "Frida found" yazısıyla karşılaşmıyoruz.
 
