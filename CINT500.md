@@ -6,14 +6,14 @@ Sorunun son adımına çok erken ulaşmamıza rağmen ilk flagi bulan olamadık.
 
 İlk olarak bir resim verildi.
 
-![Alt text](https://i.hizliresim.com/bBGXBb.jpg)
+![](CINT500_Resimler/kelebek.jpg)
 
 Hemen aklımıza cicada3301'i getirdi. Daha önceden cicada 2014ü incelemiştim. Benzer adımlar çıkcağını bekleyerek çözmeye başladık.
 
 Resimi indirdikten sonra exiftool attığımızda karşımıza bir link çıktı ```https://www.dkhos.com/m/missingpdf.jpg```
 Linke gittiğimizde bu görselle karşılaştık
 
-![Alt text](https://i.hizliresim.com/Lbnzlo.jpg)
+![](CINT500_Resimler/missingpdf.jpg)
 
 # Part 2: Yav iyi güzel de Metin nerde
 
@@ -23,7 +23,7 @@ Hemen indirdiğimiz resime de bir exiftool attık.
 
 Bu sefer Description ve Artist kısmı gözümüze çarptı. ```Delft, Netherlands``` ve ```X9WG+8F```. Google mapse attıktan sonra çevredeki yerlerin reviewlerini incelemeye başladık.
 
-![Alt text](https://i.hizliresim.com/A1kVqp.png)
+![](CINT500_Resimler/review.jpg)
 
 ```https://www.dkhos.com/m/delfthockey.pdf```
 
@@ -34,13 +34,13 @@ Bir yere not ettik ve onion linkini hesapladık.
 
 dkhosweozgoqjxxh.onion
 
-![Alt text](https://i.hizliresim.com/5DQ07R.png)
+![](CINT500_Resimler/firstonion.jpg)
 
 # Part 3: I2P de neymiş yav
 
 wallet_pass.zip isimli bir zip dosyası indirdik. Ancak "parola" isteniyordu. Önce hashi direk girmeyi denedik ama olmadı. Hemen bitcoin adresine gittik. Bir tane transaction vardı.
 
-![Alt text](https://i.hizliresim.com/Z9E6EV.png)
+![](CINT500_Resimler/bitcoin.jpg)
 
 
 Bu sefer gönderilen hesabın hashini  ```1DKHoSv7sTMJkCZPWn87dpBQFxw8rsTaH3 ```denedik ve zip açıldı.
@@ -48,7 +48,7 @@ Bu sefer gönderilen hesabın hashini  ```1DKHoSv7sTMJkCZPWn87dpBQFxw8rsTaH3 ```
 
 İçgüdüsel olarak qbittorente yolladık hemen. Ancak dosya inmiyordu. Acaba teknik bi sorunmu diye düşündük.
 
-![Alt text](https://i.hizliresim.com/8YdOzW.png)
+![Alt text](CINT500_Resimler/i2ptorrent.jpg)
 
 Torrentin trackerlarını incelemeye başladım.
 i2p uzantısı farklı geldi ve google arattım.
@@ -57,9 +57,9 @@ https://geti2p.net/en/
 
 Protokolün nasıl çalıştığını tam anlamasakta hemen kurduk.
 
-![](https://i.hizliresim.com/rO24NV.png)
+![](CINT500_Resimler/i2p.jpg)
 
-![](https://i.hizliresim.com/NZ1X8Y.png)
+![](CINT500_Resimler/seed.jpg)
 
 Şimdiye kadar indirdiğimiz en hızlı torrentti sanırım :)
 
@@ -77,13 +77,13 @@ Zipin içinden 5 resim çıktı. Daha resimleri açmadan exiftool çaktık. Kord
 
 52°9'15.58"N 9°4'29.87"E
 
-![Alt text](https://i.hizliresim.com/m2kyR8.jpg)
+![Alt text](CINT500_Resimler/kalp.jpg)
 
 Kordinatları çok spesifik sayılardı.
 
 Kağıda çizip düşünmeye başladık...
 
-![Alt text](https://i.hizliresim.com/9mdzz9.jpg)
+![Alt text](CINT500_Resimler/cizim.jpg)
 
 Sorunun başlığını tekrar okuyunca orta noktaları hesapladık. Önce 56-40, 9,21 ikililerinin tam ortasını; 48,17'yi bulduk. O kordinata gittik. Çevredeki yerlerin reviewlerine baktık baktık ancak birşey çıkmadı. Street view'e geçtik ilginç bişeyler
 varmı diye kolaçan ettik. Bir sonuca ulaşamadık. Acaba başka bir yoldan mı hesaplamamız gerekiyordu diye düşündük. Şekli Katı bir cisim gibi düşünüp ağırlık noktalarını çıkartmaya çalıştık.
@@ -91,6 +91,6 @@ varmı diye kolaçan ettik. Bir sonuca ulaşamadık. Acaba başka bir yoldan mı
 (51.2,17) , (52,17) tek tek denedik hiç ilginç bir şeyle karşılaşmadık. Akşama doğru bizim çizdiğimiz şekle çok benzer şekilde bir ipucu yayınlandı. Anladık ki ilk hesapladığımız noktada bir yerde.
 Reviewlerde olmadığına göre tek çare street viewdi. Tam o kordinatta  etrafınıza baktığınızda bir bina görüyorsunuz. Meğer o binanın üstündeki yazıymış.
 
-![Alt text](https://i.hizliresim.com/G907l2.png)
+![Alt text](CINT500_Resimler/cizim.jpg)
 
 Flagde Allexis imiş. Son adım her ne kadar kafamızı duvarlara vurdurtsada çok büyük keyif aldık çözerken.
