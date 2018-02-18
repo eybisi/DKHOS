@@ -91,6 +91,6 @@ varmı diye kolaçan ettik. Bir sonuca ulaşamadık. Acaba başka bir yoldan mı
 (51.2,17) , (52,17) tek tek denedik hiç ilginç bir şeyle karşılaşmadık. Akşama doğru bizim çizdiğimiz şekle çok benzer şekilde bir ipucu yayınlandı. Anladık ki ilk hesapladığımız noktada bir yerde.
 Reviewlerde olmadığına göre tek çare street viewdi. Tam o kordinatta  etrafınıza baktığınızda bir bina görüyorsunuz. Meğer o binanın üstündeki yazıymış.
 
-![Alt text](CINT500_Resimler/cizim.jpg)
+![Alt text](CINT500_Resimler/alexis.jpg)
 
 Flagde Allexis imiş. Son adım her ne kadar kafamızı duvarlara vurdurtsada çok büyük keyif aldık çözerken.
