@@ -3,9 +3,10 @@
 
 
 ![Alt text](MOBILE200_Resimler/log.png)
+
 NOT: sadece adb kullanarak loglara bakmak istiyorsanız;
-    pidof dkhos.mob.two yazıp processin pid'ini alın
-    adb logcat --pid <pid> ile sadece o processe ait logları görebilirsiniz.
+pidof dkhos.mob.two yazıp processin pid'ini alın
+adb logcat --pid <pid> ile sadece o processe ait logları görebilirsiniz.
 
 Programın loglarına baktığımızda 3 tane classın load edildiğini görüyoruz. Ama verilen apkyı decompile ettiğimizde içinde yok bu classlar. Program esnasında ```/data/data/dkhos.mob.two/decr``` yoluna kaydedilip daha sonra siliniyor.
 Emulator bypassını geçtikten sonra bu decr dosyasının silinmesini engelliyoruz.
@@ -47,7 +48,7 @@ decr dosyasını jdax-gui ile açıyoruz.
 
 ```dkhos.mob.load.t``` classındaki b fonksiyonunu kullanmamız gerekiyor.
 
-![Alt text](MOBILE200_Resimler/Screenshot1.png)
+![Alt text](MOBILE200_Resimler/Screenshot_1.png)
 
 
 Dinamik olarak tüm classları şu şekilde bulabiliyoruz;
