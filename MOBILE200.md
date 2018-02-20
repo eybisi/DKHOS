@@ -86,7 +86,7 @@ setImmediate(function() {
 ![Alt text](MOBILE200_Resimler/enum.png)
 
 Çokta güzel ekrana yazdırıyor. Dikkat ederseniz commente aldım bi kısmı.Şöyle ki frida dex dosyalarını, çağırıldığı uygulamanın base apksında aradığı için sonradan eklenen bu classları bulamıyor.
-O yüzden o classın oluşmuş olan instance'ına ulaşamıyoruz.O yüzden commentli kısım sonradan eklenen classlar için hata veriyor.
+O yüzden o classın oluşmuş olan instance'ına ulaşamıyoruz.Commentli kısım sonradan eklenen classlar için hata veriyor.
 
 Madem dex dosyasının bulunduğu yeri biliyoruz o zaman kendimiz yükleyelim fridaya
 
