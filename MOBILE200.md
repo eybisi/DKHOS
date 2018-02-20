@@ -107,7 +107,7 @@ setImmediate(function() { //prevent timeout
 })
 ```
 
-decr.dex'i loadluyoruz, artından bu dosyanın içinden ```dkhos.mob.load.t``` classını kullanıcağımızı söylüyoruz. Bu class'ın bir instanceını oluşturuyoruz ki fonksiyonu çağırabilelim.
+decr.dex'i loadluyoruz, ardından bu dosyanın içinden ```dkhos.mob.load.t``` classını kullanıcağımızı söylüyoruz. Bu class'ın bir instance'ını oluşturuyoruz ki fonksiyonu çağırabilelim.
 Ardından bulduğumuz iki değeri b fonksiyonuna yapıştırıyoruz.
 
 ![Alt text](MOBILE200_Resimler/flag.png)
