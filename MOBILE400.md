@@ -5,7 +5,7 @@ Kullanıcağımız toollar ;
 - APK Easy Tool ( http://bit.ly/2EIuDXi )
 - IDA PRO 7.0 Freeware ( http://bit.ly/1g6Wbo8 )
 - Frida ( ```pip install frida``` )
-- jdax ( http://bit.ly/2ClsLyu )
+- jadx ( http://bit.ly/2ClsLyu )
 
 Yüklü olmasını beklediğimiz programlar;
 
@@ -36,9 +36,9 @@ python [luhncreater.py](luhncreater.py) > luhnchecked.txt
 ![Alt text](MOBILE400_Resimler/windowsgif.gif)
 
 Bizim bu olasılıkları çok hızlı deneyebilmek için frida kullanmamız gerekiyor. Frida kısaca özetlersek telefonda çalışan bi uygulamaya dinamik olarak bağlanıp, aklınıza gelebilcek nerdeyse herşeyi yapabilyor.
-jdax ile gördüğümüz bu classların instancelarına  frida ile ulaşıp, o fonksiyon çağrıldıktan sonra değerleri manipule edebiliyorsunuz.
+jadx ile gördüğümüz bu classların instancelarına  frida ile ulaşıp, o fonksiyon çağrıldıktan sonra değerleri manipule edebiliyorsunuz.
 
-![Alt text](MOBILE400_Resimler/jdax_view.png)
+![Alt text](MOBILE400_Resimler/jadx_view.png)
 
 
 uygulamayı incelediğimizde anlıyoruzki check() fonksiyonu native bir libraryde ve kontrol ettiği değeri this.m üzerinden alıyor.
@@ -77,13 +77,13 @@ Ancak "Frida found yazısı ile karşılaşıyoruz"
 
 ![Alt text](MOBILE400_Resimler/frida_found.jpg)
 
-İlk bypassımız kolay. jdax ile class yapısını anladıktan sonra APKEasyTool ile apkyı decompile ediyoruz.
+İlk bypassımız kolay. jadx ile class yapısını anladıktan sonra APKEasyTool ile apkyı decompile ediyoruz.
 
 ![Alt text](MOBILE400_Resimler/decompile.png)
 
-![Alt text](MOBILE400_Resimler/jdax_view.png)
+![Alt text](MOBILE400_Resimler/jadx_view.png)
 
- + ``` .\smali\five\dkhos\mob\nfc_pay ```  içinde 2 adet smali dosyası görüyoruz. Bu aşamada jdaxdaki görüntü ve smali dosyası arasında mekik dokuyarak, hangi fonksiyon smalide nereye denk geliyor onu anlamamız gerekiyor.
+ + ``` .\smali\five\dkhos\mob\nfc_pay ```  içinde 2 adet smali dosyası görüyoruz. Bu aşamada jadxdaki görüntü ve smali dosyası arasında mekik dokuyarak, hangi fonksiyon smalide nereye denk geliyor onu anlamamız gerekiyor.
 
 ![Alt text](MOBILE400_Resimler/smalibypass.jpg.png)
 
@@ -94,7 +94,7 @@ Ancak "Frida found yazısı ile karşılaşıyoruz"
 ![Alt text](MOBILE400_Resimler/halafrida.png)
  Haydaa. Demekki native libraryde de bi frida checki var.
 
- native-lib var ancak jdax-gui ile bu dosyaları göremiyoruz. O yüzden APKEasyTool ile decompile ettiğimiz dosyaların içinde olan ./lib/x64_64/libnative-lib.so dosyasına gidiyoruz
+ native-lib var ancak jadx-gui ile bu dosyaları göremiyoruz. O yüzden APKEasyTool ile decompile ettiğimiz dosyaların içinde olan ./lib/x64_64/libnative-lib.so dosyasına gidiyoruz
 
 
  ![Alt text](MOBILE400_Resimler/native-lib.png)
