@@ -38,7 +38,7 @@ python [luhncreater.py](luhncreater.py) > luhnchecked.txt
 Bizim bu olasılıkları çok hızlı deneyebilmek için frida kullanmamız gerekiyor. Frida kısaca özetlersek telefonda çalışan bi uygulamaya dinamik olarak bağlanıp, aklınıza gelebilcek nerdeyse herşeyi yapabilyor.
 jadx ile gördüğümüz bu classların instancelarına  frida ile ulaşıp, o fonksiyon çağrıldıktan sonra değerleri manipule edebiliyorsunuz.
 
-![Alt text](MOBILE400_Resimler/jadx_view.png)
+![Alt text](MOBILE400_Resimler/jdax_view.png)
 
 
 uygulamayı incelediğimizde anlıyoruzki check() fonksiyonu native bir libraryde ve kontrol ettiği değeri this.m üzerinden alıyor.
